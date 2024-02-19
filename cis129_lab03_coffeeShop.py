@@ -20,7 +20,7 @@ TAX = 0.06
 
 coffeeSubtotal = noOfCoffees * COFFEE_PRICE
 muffinSubtotal = noOfMuffins * MUFFIN_PRICE
-taxSubtotal = (noOfCoffees + noOfMuffins) * TAX
+taxSubtotal = (coffeeSubtotal + muffinSubtotal) * TAX
 grandTotal = coffeeSubtotal + muffinSubtotal + taxSubtotal
 # Processes the users input along with programs constants, resulting in totals required for receipt.
 
