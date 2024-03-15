@@ -16,7 +16,7 @@ NBR_OF_DAYS = 7 # stores number of days in the week
 # begins while loop, asking user for todayBottles input
 while keepGoing == 'y':
     counter += 1
-    print("Enter number of bottles returned for day #", counter, ":")
+    print("Enter number of bottles returned for day #" + str(counter) + ":", end =' ')
     todayBottles = int(input())
     totalBottles = totalBottles + todayBottles
 
@@ -27,11 +27,12 @@ while keepGoing == 'y':
         totalPayout = totalBottles * .10
 
         # prints total bottles and payout for those bottles
-        print('The total number of bottles collected is ' + str(totalBottles))
-        print('The total paid out is $' + str(totalPayout))
-        print("Do you want to enter another week’s worth of data?")
-        print("(Enter y or n)")
+        print('\nThe total number of bottles collected is ' + str(totalBottles))
+        print('The total paid out is $' + str(f'{totalPayout:.2f}'))
+        print("\nDo you want to enter another week’s worth of data?")
+        print("(Enter y or n)", end =' ')
         keepGoing = input()
+        print()
         counter = 0 # resets counter before looping back through
 
 
